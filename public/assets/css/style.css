@@ -18,6 +18,41 @@ body {
   color: rgb(179, 178, 178);
 }
 
+.topheader {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topheader .hleft {
+  width: 50%;
+  height: auto;
+  font-weight: 600;
+  font-size: 22px;
+}
+.topheader .hright {
+  width: 50%;
+  height: auto;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.topheader .hright button {
+  border: none;
+  background-color: transparent;
+}
+.topheader .hright button i {
+  color: rgb(111, 110, 110);
+}
+.topheader .hright button span {
+  scale: -0.5;
+}
+
 .ticketbar {
   display: flex;
   justify-content: center;

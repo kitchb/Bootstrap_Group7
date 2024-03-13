@@ -3,13 +3,56 @@
 $background-color: rgb(241, 243, 245);
 $sidebar-color: rgb(43, 43, 43);
 
-// Text
+// TEXT
 $font-stack: "Montserrat", sans-serif;
+
+// COLORS
 $primary-color: black;
 $secondary-color: rgb(111, 110, 110);
 $tertiary-color: rgb(179, 178, 178);
 $sidebar-activecolor: rgb(235, 235, 235);
 $main-activecolor: rgb(63, 55, 227);
+
+// MIXINS
+@mixin header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .hleft {
+        width: 50%;
+        height: auto;
+        font-weight: 600;
+        font-size: 22px; 
+    }
+
+    .hright {
+        width: 50%;
+        height: auto;
+        font-weight: 600;
+        font-size: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;    
+
+        button {
+            border: none;
+            background-color: transparent;
+
+            i {
+                color: $secondary-color;
+            }
+
+            span {
+                scale: -.5;
+            }
+        }
+    }
+}
 
 @mixin ticketblock {
     display: flex;
@@ -36,6 +79,7 @@ $main-activecolor: rgb(63, 55, 227);
     }
 }
 
+// CSS
 body {
     font-family: $font-stack;
     font-size: 12px;
@@ -57,6 +101,11 @@ body {
 }
 
 // Main Content
+.topheader{
+    @include header;
+}
+
 .ticketbar {
     @include ticketblock;
 }
+
