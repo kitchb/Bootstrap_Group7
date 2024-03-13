@@ -1,5 +1,12 @@
-$primary-color: white;
-$text-color: black;
+$background-color: lightgray;
+$sidebar-color: rgb(43, 43, 43);
+
+// Text
+$primary-color: black;
+$seconday-color: gray;
+$tertiary-color: lightgray;
+$sidebar-activecolor: rgb(235, 235, 235);
+$main-activecolor: rgb(63, 55, 227);
 
 body {
     background-color: $primary-color;
