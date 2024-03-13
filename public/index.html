@@ -15,15 +15,21 @@
     <!-- EXTERNAL CSS LINK -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <title>Bootstrap Group 7</title>
 </head>
 
 <body>
     <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
         <!-- Vertical Navigation Bar -->
-        <nav class="nav flex-column">
+        <nav class="nav flex-column sidebar">
             <div class="container-fluid">
-                <h1 class="nav-link active" aria-current="page" href="#">
+                <h1 class="nav-link dashboard heading1" aria-current="page" href="#">
                     <img src="/assets/img/Icons/Dashboard Kit.png" alt="Logo" width="32" height="32"
                         class="d-inline-block align-text-top">
                     Dashboard Kit
@@ -32,33 +38,33 @@
                     <i class="bi bi-pie-chart-fill"></i>
                     Overview
                 </a>
-                <a class="nav-link" href="#">
+                <a class="nav-link sidelink" href="#">
                     <i class="bi bi-ticket-fill"></i>
                     Tickets
                 </a>
-                <a class="nav-link" href="#">
+                <a class="nav-link sidelink" href="#">
                     <i class="bi bi-lightbulb-fill"></i>
                     Ideas
                 </a>
-                <a class="nav-link" href="#">
+                <a class="nav-link sidelink" href="#">
                     <i class="bi bi-people-fill"></i>
                     Contacts
                 </a>
-                <a class="nav-link" href="#">
+                <a class="nav-link sidelink" href="#">
                     <i class="bi bi-person-fill"></i>
                     Agents
                 </a>
-                <a class="nav-link" href="#">
+                <a class="nav-link sidelink" href="#">
                     <i class="bi bi-book-fill"></i>
                     Articles
                 </a>
                 <!-- Horizontal Divider -->
                 <hr />
-                <a class="nav-link" href="#">
+                <a class="nav-link sidelink" href="#">
                     <i class="bi bi-gear-fill"></i>
                     Settings
                 </a>
-                <a class="nav-link" href="#">
+                <a class="nav-link sidelink" href="#">
                     <i class="bi bi-patch-check-fill"></i>
                     Subscriptions
                 </a>
@@ -75,7 +81,7 @@
                             <div class="mb-npx">
                                 <div class="row align-items-center">
                                     <div class="hstack gap-3">
-                                        <div class="p-2">Overview</div>
+                                        <div class="p-2 heading0">Overview</div>
                                         <button type="button" class="btn btn-primary position-relative">
                                             <i class="bi bi-search"></i>
                                         </button>
@@ -107,33 +113,33 @@
                     <div class="row g-6 mb-6">
                         <div class="col-xl-3 col-sm-6 col-12">
                             <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">Unresolved</h5>
-                                    <p class="card-text numb-block">60</p>
+                                <div class="card-body ticketbar">
+                                    <h5 class="card-title heading1">Unresolved</h5>
+                                    <p class="card-text numb-block numbers1">60</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-sm-6 col-12">
                             <div class="card h-100">
-                                <div class="card-body bactive">
-                                    <h5 class="card-title">Overdue</h5>
-                                    <p class="card-text numb-block">16</p>
+                                <div class="card-body ticketbar">
+                                    <h5 class="card-title heading1">Overdue</h5>
+                                    <p class="card-text numb-block numbers1">16</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-sm-6 col-12">
                             <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">Open</h5>
-                                    <p class="card-text numb-block">43</p>
+                                <div class="card-body ticketbar">
+                                    <h5 class="card-title heading1">Open</h5>
+                                    <p class="card-text numb-block numbers1">43</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-sm-6 col-12">
                             <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">On hold</h5>
-                                    <p class="card-text numb-block">64</p>
+                                <div class="card-body ticketbar">
+                                    <h5 class="card-title heading1">On hold</h5>
+                                    <p class="card-text numb-block numbers1">64</p>
                                 </div>
                             </div>
                         </div>
@@ -147,7 +153,7 @@
                             <div class="card-group">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h2 class="card-title">Today's trends</h2>
+                                        <h2 class="card-title heading2">Today's trends</h2>
                                         <p class="card-text"><small class="text-body-secondary">as of 25 May 2019 09:41
                                                 PM</small></p>
                                         <span class="line"></span>
@@ -195,7 +201,7 @@
                         <div class="col">
                             <div class="card" style="width: 18rem;">
                                 <div class="card-body">
-                                    <h5 class="card-title">Unresolved tickets</h5>
+                                    <h5 class="card-title heading2">Unresolved tickets</h5>
                                     <p class="card-text">Group: <a href=""> Support </a></p>
                                     <a href="#" class="card-link"> View details </a>
                                 </div>
@@ -223,7 +229,7 @@
                         <div class="col">
                             <div class="card" style="width: 18rem;">
                                 <div class="card-body">
-                                    <h5 class="card-title"> Tasks </h5>
+                                    <h5 class="card-title heading2"> Tasks </h5>
                                     <p class="card-text"> Today </p>
                                     <a href="#" class="card-link"> View all </a>
                                 </div>
