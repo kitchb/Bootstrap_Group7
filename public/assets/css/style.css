@@ -75,4 +75,48 @@ body {
   border-radius: 5px;
 }
 
+.rightbar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 12px;
+  color: rgb(111, 110, 110);
+}
+.rightbar p {
+  color: black;
+  font-weight: 600;
+  font-size: 22px;
+  padding: 8px;
+}
+
+.leftbar .heading2 {
+  font-weight: 600;
+  font-size: 14px;
+}
+.leftbar .subheading {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: rgb(179, 178, 178);
+  font-size: 11px;
+  height: auto;
+  width: 100%;
+}
+.leftbar .legend {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.leftbar .legend p {
+  padding: 0 15px;
+}
+.leftbar .legend hr.bluebar {
+  border-top: 1px solid blue;
+}
+
 /*# sourceMappingURL=style.css.map */
