@@ -4,7 +4,7 @@ $background-color: rgb(241, 243, 245);
 $sidebar-color: rgb(43, 43, 43);
 
 // TEXT
-$font-stack: "Montserrat", sans-serif;
+$font-stack: "Mulish", sans-serif;
 
 // COLORS
 $primary-color: black;
@@ -14,6 +14,33 @@ $sidebar-activecolor: rgb(235, 235, 235);
 $main-activecolor: rgb(63, 55, 227);
 
 // MIXINS
+// MAIN
+@mixin head2 {
+    font-weight: 600;
+    font-size: 19px;
+}
+
+@mixin topsub {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@mixin subhead { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: $tertiary-color;
+    font-size: 12px;
+    height: auto;
+    width: 100%;
+}
+
+// HEADER
 @mixin header {
     width: 100%;
     height: auto;
@@ -25,14 +52,14 @@ $main-activecolor: rgb(63, 55, 227);
         width: 50%;
         height: auto;
         font-weight: 600;
-        font-size: 22px; 
+        font-size: 24px; 
     }
 
     .hright {
         width: 50%;
         height: auto;
         font-weight: 600;
-        font-size: 12px;
+        font-size: 14px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -50,7 +77,7 @@ $main-activecolor: rgb(63, 55, 227);
     }
 }
 
-
+// ROW OF TICKET BLOCK
 @mixin ticketblock {
     display: flex;
     justify-content: center;
@@ -60,13 +87,13 @@ $main-activecolor: rgb(63, 55, 227);
 
     h5 {
         font-weight: 600;
-        font-size: 14px; 
+        font-size: 19px; 
         color: $secondary-color;
     }
 
     p {
-        font-weight: 600;
-        font-size: 32px;
+        font-weight: 700;
+        font-size: 40px;
     }
 
     &:hover {
@@ -76,23 +103,8 @@ $main-activecolor: rgb(63, 55, 227);
     }
 }
 
+// TODAY'S TREND
 @mixin leftblock {
-    .heading2 {
-        font-weight: 600;
-        font-size: 14px;
-    }
-
-    .subheading { 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        color: $tertiary-color;
-        font-size: 11px;
-        height: auto;
-        width: 100%;
-    }
-
     .legend {
         display: flex;
         flex-direction: row;
@@ -111,14 +123,12 @@ $main-activecolor: rgb(63, 55, 227);
     }
 }
 
-
-
 @mixin rightblock {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
+    padding: 16px;
     font-weight: 500;
     font-size: 12px; 
     color: $secondary-color;
@@ -126,9 +136,35 @@ $main-activecolor: rgb(63, 55, 227);
     p {
         color: $primary-color;
         font-weight: 600;
-        font-size: 22px;
+        font-size: 24px;
         padding: 8px;
     }
+}
+
+// UNRESOLVED TICKET
+@mixin unresolved {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+
+    a {
+        text-decoration: none;
+    }
+
+    #support {
+        color: black;
+        font-weight: 500;
+    }
+}
+
+@mixin list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-between;
+    font-size: 14px;
 }
 
 // CSS
@@ -153,20 +189,42 @@ body {
 }
 
 // Main Content
+.heading2 {
+    @include head2;
+}
+
+.subheading {
+    @include subhead;
+}
+
+// 1ST ROW
 .topheader{
     @include header;
 }
 
+// 2ND ROW
 .ticketbar {
     @include ticketblock;
 }
 
-
-
+// 3RD ROW: TODAY'S TREND
 .rightbar{
     @include rightblock;
 }
 
 .leftbar{
     @include leftblock;
+}
+
+// 4TH ROW: TICKETS & TASKS
+.top-subheading {
+    @include topsub;
+}
+
+.unresolvedbar {
+    @include unresolved;
+}
+
+ul {
+    @include list;
 }
