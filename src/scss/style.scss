@@ -47,6 +47,7 @@ $main-activecolor: rgb(63, 55, 227);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
 
     .hleft {
         width: 50%;
@@ -88,7 +89,8 @@ $main-activecolor: rgb(63, 55, 227);
     h5 {
         font-weight: 600;
         font-size: 19px; 
-        color: $secondary-color;
+        // color: $secondary-color;
+        opacity: .7;
     }
 
     p {
