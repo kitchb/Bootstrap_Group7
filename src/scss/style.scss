@@ -46,10 +46,6 @@ $main-activecolor: rgb(63, 55, 227);
             i {
                 color: $secondary-color;
             }
-
-            span {
-                scale: -.5;
-            }
         }
     }
 }
@@ -74,8 +70,8 @@ $main-activecolor: rgb(63, 55, 227);
     }
 
     &:hover {
-        color: $main-activecolor;
-        border: 1px solid $main-activecolor;
+        color: $main-activecolor !important;
+        border: 1px solid $main-activecolor !important;
         border-radius: 5px;
     }
 }
@@ -123,7 +119,7 @@ $main-activecolor: rgb(63, 55, 227);
     flex-direction: column;
     align-items: center;
     padding: 15px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 12px; 
     color: $secondary-color;
 
@@ -134,67 +130,6 @@ $main-activecolor: rgb(63, 55, 227);
         padding: 8px;
     }
 }
-
-
-
-
-@mixin leftblock {
-    .heading2 {
-        font-weight: 600;
-        font-size: 14px;
-    }
-
-    .subheading { 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        color: $tertiary-color;
-        font-size: 11px;
-        height: auto;
-        width: 100%;
-    }
-
-    .legend {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        // position: relative;
-
-        p {
-            padding: 0 15px;
-        }
-    
-        hr.bluebar{
-            border-top: 1px solid blue;
-            // position: absolute;
-        }
-    }
-}
-
-
-
-@mixin rightblock {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    font-weight: 600;
-    font-size: 12px; 
-    color: $secondary-color;
-
-    p {
-        color: $primary-color;
-        font-weight: 600;
-        font-size: 22px;
-        padding: 8px;
-    }
-}
-
-
-
 
 // CSS
 body {
