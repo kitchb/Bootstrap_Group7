@@ -311,7 +311,7 @@ body {
 
 .rightbar {
     @include rightblock;
-    padding: 25px 125px;
+    padding: 25px 90px;
     white-space: nowrap;
 }
 
@@ -324,15 +324,13 @@ body {
     @include topsub;
 }
 
-// .bottomblock {
-//     width: 50%;
+// .fourthcard {
+//     width: 100%;
 //     height: 336px;
+//     display: flex;
+//     justify-content: center;
+//     align-content: center;
 // }
-
-.fourthcard {
-    width: 100%;
-    height: 336px;
-}
 
 .fourthcard-body {
     @include fourthcard-body;
@@ -410,4 +408,5 @@ body {
         width: 100%;
         height: auto;
     }
+    
 }
