@@ -29,8 +29,8 @@
         <!-- Vertical Navigation Bar -->
         <!-- For Responsive Nav Toggle Button -->
         <input type="checkbox" id="sidebarToggleCheckbox" class="sidebar-toggle-checkbox">
-        <label for="sidebarToggleCheckbox" class="sidebar-toggle-label heading1"><img src="assets/img/Icons/navbutton.svg"
-                alt="Logo" width="20" height="20"></label>
+        <label for="sidebarToggleCheckbox" class="sidebar-toggle-label heading1"><img
+                src="assets/img/Icons/navbutton.svg" alt="Logo" width="20" height="20"></label>
 
         <nav class="nav flex-column sidebar">
             <div class="container-fluid sidebar-body">
@@ -40,7 +40,7 @@
                             class="d-inline-block align-text-top">
                         Dashboard Kit
                     </h1>
-                    <a class="nav-link active p-3" aria-current="page" href="#">
+                    <a class="nav-link sidelink p-3" aria-current="page" href="#">
                         <i class="bi bi-pie-chart-fill"></i>
                         Overview
                     </a>
@@ -165,43 +165,47 @@
                     <!-- Today's Trends -->
                     <div class="row">
                         <div class="col-xs-12">
-                            <div class="card-group">
-                                <div class="card leftbar">
-                                    <div class="card-body">
-                                        <h2 class="card-title heading2">Today's trends</h2>
-                                        <div class="subheading">
-                                            <p class="card-text">as of 25 May 2019 09:41
-                                                PM</p>
-                                            <img class="legend" src="assets/img/Icons/legend.png"
-                                                alt="legend for graph: blue for today and grey for Yesterday">
-                                            <img src="/assets/img/Icons/graph.png" class="card-img-top graph"
-                                                alt="graph image of today's trends">
+                            <div class="card-group d-flex flex-wrap">
+                                <div class="col-md-8">
+                                    <div class="card h-100 leftbar">
+                                        <div class="card-body">
+                                            <h2 class="card-title heading2">Today's trends</h2>
+                                            <div class="subheading">
+                                                <p class="card-text">as of 25 May 2019 09:41
+                                                    PM</p>
+                                                <img class="legend" src="assets/img/Icons/legend.png"
+                                                    alt="legend for graph: blue for today and grey for Yesterday">
+                                                <img src="/assets/img/Icons/graph.png" class="card-img-top graph"
+                                                    alt="graph image of today's trends">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
-                                    <ul class="list-group list-group-flush rightlist">
-                                        <li class="list-group-item disabled rightbar" aria-disabled="true">
-                                            Resolved
-                                            <p>449</p>
-                                        </li>
-                                        <li class="list-group-item disabled rightbar" aria-disabled="true">
-                                            Received
-                                            <p>426</p>
-                                        </li>
-                                        <li class="list-group-item disabled rightbar" aria-disabled="true">
-                                            Average first response time
-                                            <p>33m</p>
-                                        </li>
-                                        <li class="list-group-item disabled rightbar" aria-disabled="true">
-                                            Average response time
-                                            <p>3h 8m</p>
-                                        </li>
-                                        <li class="list-group-item disabled rightbar" aria-disabled="true">
-                                            Resolution with SLA
-                                            <p>94%</p>
-                                        </li>
-                                    </ul>
+                                <div class="col-md-4">
+                                    <div class="card h-100 rightcard">
+                                        <ul class="list-group list-group-flush rightlist flex-grow-1">
+                                            <li class="list-group-item disabled rightbar" aria-disabled="true">
+                                                Resolved
+                                                <p>449</p>
+                                            </li>
+                                            <li class="list-group-item disabled rightbar" aria-disabled="true">
+                                                Received
+                                                <p>426</p>
+                                            </li>
+                                            <li class="list-group-item disabled rightbar" aria-disabled="true">
+                                                Average first response time
+                                                <p>33m</p>
+                                            </li>
+                                            <li class="list-group-item disabled rightbar" aria-disabled="true">
+                                                Average response time
+                                                <p>3h 8m</p>
+                                            </li>
+                                            <li class="list-group-item disabled rightbar" aria-disabled="true">
+                                                Resolution with SLA
+                                                <p>94%</p>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
