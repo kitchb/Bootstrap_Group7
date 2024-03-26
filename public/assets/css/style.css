@@ -8,10 +8,12 @@ body {
 
 .sidebar {
   background-color: rgb(43, 43, 43);
+  white-space: nowrap;
 }
 
 .dashboard {
   color: rgb(111, 110, 110);
+  font-size: 16px;
 }
 
 .sidelink {
@@ -149,6 +151,40 @@ ul {
   padding: 20px;
   justify-content: space-between;
   font-size: 14px;
+}
+
+.sidebar-toggle-label {
+  display: none;
+}
+
+#sidebarToggleCheckbox {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .topheader .hleft,
+  .topheader .hright {
+    width: 100%;
+    text-align: center;
+  }
+  .sidebar-toggle-checkbox {
+    display: none;
+  }
+  .sidebar-toggle-label {
+    display: block;
+    background-color: #363740;
+    color: rgb(111, 110, 110);
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .sidebar-toggle-checkbox:checked ~ .sidebar {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

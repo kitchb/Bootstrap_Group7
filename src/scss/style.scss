@@ -180,10 +180,12 @@ body {
 // Vertical Sidebar
 .sidebar {
     background-color: $sidebar-color;
+    white-space: nowrap;
 }
 
 .dashboard {
     color: $secondary-color;
+    font-size: 16px;
 }
 
 .sidelink {
@@ -229,4 +231,45 @@ body {
 
 ul {
     @include list;
+}
+
+// Responsive Nav Toggle Button
+.sidebar-toggle-label {
+    display: none;
+}
+
+#sidebarToggleCheckbox{
+    display: none;
+}
+
+// MEDIA QUERY
+@media (max-width: 768px) {
+    .sidebar {
+        // width: 100%; 
+        display: none;
+    }
+
+    .topheader .hleft,
+    .topheader .hright {
+        width: 100%;  
+        text-align: center; 
+    }
+
+    .sidebar-toggle-checkbox {
+        display: none;
+    }
+
+    .sidebar-toggle-label {
+        display: block;
+        background-color:#363740;
+        color: $secondary-color;
+        font-weight: bold;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .sidebar-toggle-checkbox:checked ~ .sidebar {
+        display: block;
+    }
 }
