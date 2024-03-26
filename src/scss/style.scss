@@ -14,6 +14,52 @@ $sidebar-activecolor: rgb(235, 235, 235);
 $main-activecolor: rgb(63, 55, 227);
 
 // MIXINS
+// SIDEBAR
+@mixin sidebar {
+    width: 20%;
+    height: auto;
+    background-color: $sidebar-color;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+
+    .sidebar-body {
+        width: 100%;
+        height: 608px;
+        justify-content: space-between;
+        align-items: space-between;
+
+        .heading1 {
+            font-size: 19px;
+            font-weight: 700;
+            padding: 40px 30px;
+
+            img {
+                margin-right: 20px;
+            }
+        }
+
+        a {
+            font-size: 16px;
+            // margin: 5px 20px;
+
+            i {
+                margin-right: 20px;
+            }
+
+            &:hover {
+                background-color: rgb(81, 80, 80);
+                color: $sidebar-activecolor;
+                border-left: solid white;
+            }
+        }
+
+        hr {
+            color: $tertiary-color;
+        }
+    }
+}
+
 // MAIN
 @mixin head2 {
     font-weight: 600;
@@ -34,7 +80,7 @@ $main-activecolor: rgb(63, 55, 227);
     }
 }
 
-@mixin subhead { 
+@mixin subhead {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -58,7 +104,7 @@ $main-activecolor: rgb(63, 55, 227);
         width: 50%;
         height: auto;
         font-weight: 600;
-        font-size: 24px; 
+        font-size: 24px;
         text-align: left;
     }
 
@@ -71,7 +117,7 @@ $main-activecolor: rgb(63, 55, 227);
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: flex-end;
-        align-items: center;    
+        align-items: center;
 
         button {
             border: none;
@@ -94,7 +140,7 @@ $main-activecolor: rgb(63, 55, 227);
 
     h5 {
         font-weight: 600;
-        font-size: 19px; 
+        font-size: 19px;
         // color: $secondary-color;
         opacity: .7;
     }
@@ -141,7 +187,7 @@ $main-activecolor: rgb(63, 55, 227);
     align-items: center;
     padding: 16px;
     font-weight: 500;
-    font-size: 12px; 
+    font-size: 12px;
     color: $secondary-color;
 
     p {
@@ -202,17 +248,17 @@ $main-activecolor: rgb(63, 55, 227);
 
 .topheader .hleft,
 .topheader .hright {
-    width: 100%;  
-    text-align: center; 
+    width: 100%;
+    text-align: center;
 }
 
 .sidebar-toggle-checkbox {
-    display: block;
+    display: none;
 }
 
 .sidebar-toggle-label {
     display: block;
-    background-color:#363740;
+    background-color: #363740;
     color: $secondary-color;
     font-weight: bold;
     padding: 10px 20px;
@@ -220,12 +266,13 @@ $main-activecolor: rgb(63, 55, 227);
     transition: background-color 0.3s ease;
 }
 
-.sidebar-toggle-checkbox:checked ~ .sidebar {
+.sidebar-toggle-checkbox:checked~.sidebar {
     display: block;
 }
 
 // MEDIA QUERY
 @media (min-width: 989px) {
+
     // CSS
     body {
         font-family: $font-stack;
@@ -236,9 +283,7 @@ $main-activecolor: rgb(63, 55, 227);
 
     // Vertical Sidebar
     .sidebar {
-        background-color: $sidebar-color;
-        white-space: nowrap;
-        display: block;
+        @include sidebar;
     }
 
     .dashboard {
@@ -260,7 +305,7 @@ $main-activecolor: rgb(63, 55, 227);
     }
 
     // 1ST ROW
-    .topheader{
+    .topheader {
         @include header;
     }
 
@@ -276,11 +321,11 @@ $main-activecolor: rgb(63, 55, 227);
         padding: 30px;
     }
 
-    .rightbar{
+    .rightbar {
         @include rightblock;
     }
 
-    .leftbar{
+    .leftbar {
         @include leftblock;
     }
 
@@ -317,7 +362,7 @@ $main-activecolor: rgb(63, 55, 227);
         display: none;
     }
 
-    #sidebarToggleCheckbox{
+    #sidebarToggleCheckbox {
         display: none;
     }
 }
