@@ -311,6 +311,8 @@ body {
 
 .rightbar {
     @include rightblock;
+    padding: 25px 125px;
+    white-space: nowrap;
 }
 
 .leftbar {
@@ -405,6 +407,7 @@ body {
     }
 
     .rightcard {
-    width: 100%;
+        width: 100%;
+        height: auto;
     }
 }
