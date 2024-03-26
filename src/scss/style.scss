@@ -159,7 +159,7 @@ $main-activecolor: rgb(63, 55, 227);
 
 // TODAY'S TREND
 @mixin leftblock {
-    width: 70%;
+    width: 100%;
     height: 546px;
     padding: 30px;
 
@@ -239,23 +239,109 @@ $main-activecolor: rgb(63, 55, 227);
     }
 }
 
-
 // MOBILE FIRST RESPONSIVE
+// CSS
+body {
+    font-family: $font-stack;
+    font-size: 12px;
+    background-color: $background-color;
+    color: $primary-color;
+}
+
+// Vertical Sidebar
 .sidebar {
-    // width: 100%; 
+    @include sidebar;
     display: none;
-}
-
-.topheader .hleft,
-.topheader .hright {
     width: 100%;
-    text-align: center;
+
+    .sidebar-body{
+        .heading1{
+            padding: 20px 30px;
+        }
+
+        a{
+            font-size: 12px;
+        }
+    }
 }
 
-.sidebar-toggle-checkbox {
-    display: none;
+
+.dashboard {
+    color: $secondary-color;
+    font-size: 16px;
 }
 
+.sidelink {
+    color: $tertiary-color;
+}
+
+// Main Content
+.heading2 {
+    @include head2;
+}
+
+.subheading {
+    @include subhead;
+}
+
+// 1ST ROW
+.topheader {
+    @include header;
+
+    .profilename{
+        display: none;
+    }
+}
+
+// 2ND ROW
+.ticketbar {
+    @include ticketblock;
+}
+
+// 3RD ROW: TODAY'S TREND
+.thirdcard {
+    width: 100%;
+    height: 546px;
+    padding: 30px;
+}
+
+.rightbar {
+    @include rightblock;
+}
+
+.leftbar {
+    @include leftblock;
+}
+
+// 4TH ROW: TICKETS & TASKS
+.top-subheading {
+    @include topsub;
+}
+
+.bottomblock {
+    width: 50%;
+    height: 336px;
+}
+
+.fourthcard {
+    width: 100%;
+    height: 336px;
+}
+
+.fourthcard-body {
+    @include fourthcard-body;
+}
+
+.listblock {
+    @include list;
+}
+
+// TEXT
+.disabledtext {
+    color: $tertiary-color;
+}
+
+// Responsive Nav Toggle Button
 .sidebar-toggle-label {
     display: block;
     background-color: #363740;
@@ -266,6 +352,10 @@ $main-activecolor: rgb(63, 55, 227);
     transition: background-color 0.3s ease;
 }
 
+#sidebarToggleCheckbox {
+    display: none;
+}
+
 .sidebar-toggle-checkbox:checked~.sidebar {
     display: block;
 }
@@ -273,96 +363,40 @@ $main-activecolor: rgb(63, 55, 227);
 // MEDIA QUERY
 @media (min-width: 989px) {
 
-    // CSS
-    body {
-        font-family: $font-stack;
-        font-size: 12px;
-        background-color: $background-color;
-        color: $primary-color;
-    }
-
-    // Vertical Sidebar
     .sidebar {
-        @include sidebar;
+        // width: 100%; 
+        display: block;
+        width: 20%;
+
+        .sidebar-body{
+            .heading1{
+                padding: 40px 30px;
+            }
+    
+            a{
+                font-size: 16px;
+            }
+        }
     }
 
-    .dashboard {
-        color: $secondary-color;
-        font-size: 16px;
-    }
-
-    .sidelink {
-        color: $tertiary-color;
-    }
-
-    // Main Content
-    .heading2 {
-        @include head2;
-    }
-
-    .subheading {
-        @include subhead;
-    }
-
-    // 1ST ROW
-    .topheader {
-        @include header;
-    }
-
-    // 2ND ROW
-    .ticketbar {
-        @include ticketblock;
-    }
-
-    // 3RD ROW: TODAY'S TREND
-    .thirdcard {
+    .topheader .hright {
         width: 100%;
-        height: 546px;
-        padding: 30px;
+        text-align: center;
+
+        .profilename{
+            display: block;
+        }
     }
 
-    .rightbar {
-        @include rightblock;
+    .sidebar-toggle-checkbox {
+        display: none;
     }
 
-    .leftbar {
-        @include leftblock;
-    }
-
-    // 4TH ROW: TICKETS & TASKS
-    .top-subheading {
-        @include topsub;
-    }
-
-    .bottomblock {
-        width: 50%;
-        height: 336px;
-    }
-
-    .fourthcard {
-        width: 100%;
-        height: 336px;
-    }
-
-    .fourthcard-body {
-        @include fourthcard-body;
-    }
-
-    .listblock {
-        @include list;
-    }
-
-    // TEXT
-    .disabledtext {
-        color: $tertiary-color;
-    }
-
-    // Responsive Nav Toggle Button
     .sidebar-toggle-label {
         display: none;
     }
 
-    #sidebarToggleCheckbox {
+    .sidebar-toggle-checkbox:checked~.sidebar {
         display: none;
     }
 }
